@@ -18,6 +18,8 @@
 .svn/
 
 #Ignore Selected Config files.
-config/*.yml
-config/*.csv
+config/database.yml
+config/settings.yml
+config/yelp.yml
+config/zip_codes.csv
 config/yelp_configuration.rb

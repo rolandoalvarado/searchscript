@@ -1,0 +1,12 @@
+---
+:yelp_options:
+  :consumer_key: 12345678900987654321
+  :consumer_secret: ABCDEFGHIJKLMNOPRSTUVWXYZ
+  :token: abcdefghijklnmopqrstuvwxyz
+  :token_secret: 1234567890
+  :api_host: api.yelp.com
+  :result_limit: 10
+  :search_term: your_search_term
+  :specific_location: location_specified
+  :api_version: v2
+  :location_unavailable: UNAVAILABLE_FOR_LOCATION

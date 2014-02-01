@@ -1,7 +1,7 @@
 settings:
   account_admin:
     username: admin
-    password: adm123
+    password: admin
     token_expiry: 86400
   switch:
     google_analytics: false
