@@ -14,10 +14,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
 # Ignore SVN files.
 .svn/
 
-#Ignore Selected Config files.
+# Ignore Selected Config files.
 config/database.yml
 config/settings.yml
 config/yelp.yml
