@@ -6,23 +6,33 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+  - ruby-2.0.0-p353 [ x86_64 ]
 
 * System dependencies
+  - Please refer to the Gemfile
 
 * Configuration
-
+  - Setup database.yml, settings.yml, yelp.yml and yelp_configuration.rb
+  
 * Database creation
-
+  - rake db:create
+  
 * Database initialization
+  - rake db:migrate
 
-* How to run the test suite
+* Change permission of the script before executing
+  - sudo chmod 755 scripts/process_csv.rb
+  - sudo chmod 755 scripts/superYelpScript.rb
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* How to run the script.
+  - Load the Zip Codes into the zip_codes Table first.
+    1. Copy the zip codes into a csv file and save it as zip_codes.csv
+    2. Go to the application root directory and execute process_csv script to
+       load the zip codes into the table.
+       $ ./scripts/process_csv.rb
+          
+  - Execute the Yelp Search Script.
+    $ ./scripts/superYelpScript.rb
+    
+    NOTE: Do not execute Yelp Search Script if you have not loaded the zip codes
+          yet otherwise you will not get any data.
