@@ -38,7 +38,10 @@ if File.exists?(config_path)
   zip_codes.each do |zip_code|
     i_zip_code = zip_code[:z_zip_code].to_i
     puts "Search by #{search_term} in #{specific_location} with Zip Code : #{i_zip_code}"
-    search_query    = "/#{api_version}/search?term=#{search_term}&location=#{i_zip_code}&limit=#{result_limit}"
+    # With Search Limit
+    # search_query    = "/#{api_version}/search?term=#{search_term}&location=#{i_zip_code}&limit=#{result_limit}"
+    # No Search Limit
+    search_query    = "/#{api_version}/search?term=#{search_term}&location=#{i_zip_code}"
        
     @config = {} unless @config
     consumer = OAuth::Consumer.new(consumer_key, consumer_secret, {:site => site_url })
