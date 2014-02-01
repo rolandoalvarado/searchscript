@@ -5,7 +5,7 @@
   :token: kx27bo4EEIn7210dMvVQzxf2n2PK_Zb6
   :token_secret: ev_80OSlMEK7UgOzYZNWvjsxo2U
   :api_host: api.yelp.com
-  :result_limit: 20
+  :result_limit: 10
   :search_term: 'Mechanic'
   :specific_location: 'Southern California'
   :api_version: v2
