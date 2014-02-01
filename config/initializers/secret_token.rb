@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-FrozenProton::Application.config.secret_key_base = '1664ba70ab875064bf4e163e06efcd7341f8a6993c29f0d9f413b4ef0ad891936b399ab5e7414796152c71656dd530c063585d6dfc99a192b266d8d2d48373bd'
+SearchScript::Application.config.secret_key_base = '1664ba70ab875064bf4e163e06efcd7341f8a6993c29f0d9f413b4ef0ad891936b399ab5e7414796152c71656dd530c063585d6dfc99a192b266d8d2d48373bd'

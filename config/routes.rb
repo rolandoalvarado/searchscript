@@ -1,4 +1,4 @@
-FrozenProton::Application.routes.draw do
+SearchScript::Application.routes.draw do
   
   resources :locations
   #resources :users

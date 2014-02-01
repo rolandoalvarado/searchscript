@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module FrozenProton
+module SearchScript
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -28,20 +28,6 @@ module FrozenProton
     config.i18n.default_locale = :en
 
     config.i18n.available_locales = [:en]
-    config.i18n.fallbacks = [:en]
-    
-    config.assets.enabled = true
-    #config.assets.version = ::Version.to_s
-    #config.assets.precompile.push /^(i18n)\/.*(js|css|scss)$/
-    
-    # -------------------------------------------------------------------------
-    # Use this config in testing email via localhost.
-    config.action_mailer.delivery_method = :sendmail #:smtp
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.raise_delivery_errors = true
-    #config.action_mailer.default_url_options = { :host => 'localhost:3000' } # For Local Host
-    config.action_mailer.default_url_options = { :host => 'dev002.teknofx.com' } # For Staging
-    # -------------------------------------------------------------------------
-    config.active_record.observers = :user_observer
+    config.i18n.fallbacks = [:en]   
   end
 end

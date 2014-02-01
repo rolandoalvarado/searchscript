@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FrozenProton::Application.load_tasks
+SearchScript::Application.load_tasks
