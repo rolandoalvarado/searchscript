@@ -1,0 +1,37 @@
+<%= render '/shared/flash_error_notice'%>
+<!--[Start] Content -->
+<div class="home" id="content-placeholder"> 
+	  <!-- Left Content -->
+	  <div id="left-content">
+	    <%#= form_tag :controller => 'users', :action => 'search_mechanic', 
+	                 :method => 'get' do %>
+      <!--
+      <div id="search-placeholder">
+	      <div id="search-field-group">
+			    <%= text_field_tag :search_mechanic, params[:search], :class => 'search_field_mechanic', 
+			                       :size => 30, :placeholder => 'Search For Mechanic' %>
+				  <%= text_field_tag :search_address, params[:search], :class => 'search_field_address',
+			                       :size => 30, :placeholder => 'Search by address, zip or city' %>
+				  <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+		    </div> 
+		  </div>
+		  <div id="search-results">
+		    
+		  </div>-->
+      <%# end %>  
+      <div id="map" style='width: 100%; height: 423px;'></div>
+	  </div>
+	  <!-- /Left Content -->
+	  <!-- Right Content -->
+	  <%= render ('/shared/promotional_video') %>
+    <!-- /Right Content -->
+</div>
+<!--[End] Content -->
+<script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>

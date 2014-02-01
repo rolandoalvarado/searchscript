@@ -1,0 +1,14 @@
+<div id="location">
+  <div id="location-form-wrapper">
+    <div id="map" style='width: 100%; height: 423px;'></div>
+  </div>
+</div>
+<script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(<%=raw @location_hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>
+

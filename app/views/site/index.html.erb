@@ -1,0 +1,21 @@
+<%= render '/shared/flash_error_notice'%>
+<!--[Start] Content -->
+<div class="home" id="content-placeholder"> 
+	  <!-- Left Content -->
+	  <div id="left-content">	    
+      <div id="map" style='width: 100%; height: 423px;'></div>
+	  </div>
+	  <!-- /Left Content -->
+	  <!-- Right Content -->
+	  <%= render ('/shared/promotional_video') %>
+    <!-- /Right Content -->
+</div>
+<!--[End] Content -->
+<script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>

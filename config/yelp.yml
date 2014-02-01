@@ -1,0 +1,11 @@
+---
+:yelp_options:
+  :consumer_key: t0Tam0zymUAZoreDJ34Jog
+  :consumer_secret: 8Ysr1X5kw7PdsJ2iIz0UbUf1X3I
+  :token: kx27bo4EEIn7210dMvVQzxf2n2PK_Zb6
+  :token_secret: ev_80OSlMEK7UgOzYZNWvjsxo2U
+  :api_host: api.yelp.com
+  :result_limit: 10
+  :search_term: mechanic
+  :api_version: v2
+  :location_unavailable: UNAVAILABLE_FOR_LOCATION
