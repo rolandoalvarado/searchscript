@@ -15,8 +15,9 @@ module YelpConfiguration
   RESULT_LIMIT         = :result_limit
   SEARCH_TERM          = :search_term
   API_VERSION          = :api_version
+  SPECIFIC_LOCATION    = :specific_location
   LOCATION_UNAVAILABLE = :location_unavailable
-  CSV_PATH             = File.expand_path('../southern_california_zip_codes.csv', __FILE__)
+  CSV_PATH             = File.expand_path('../zip_codes.csv', __FILE__)
   
   class ConfigFile
     include Singleton

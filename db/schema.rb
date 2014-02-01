@@ -121,10 +121,9 @@ ActiveRecord::Schema.define(version: 20140201051921) do
     t.datetime "updated_at"
   end
 
-  create_table "zipcodes", force: true do |t|
+  create_table "zip_codes", force: true do |t|
     t.integer  "z_zip_code"
     t.string   "z_address"
-    t.string   "z_population"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
