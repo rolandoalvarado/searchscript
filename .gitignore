@@ -16,3 +16,8 @@
 /tmp
 # Ignore SVN files.
 .svn/
+
+#Ignore Selected Config files.
+/config/*.yml
+/config/*.csv
+/config/yelp_configuration.rb
