@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140201051921) do
+ActiveRecord::Schema.define(version: 20140204194712) do
 
   create_table "classifications", force: true do |t|
     t.string   "c_make"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140201051921) do
     t.integer  "user_id",                 default: 0,    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category"
   end
 
   create_table "responses", force: true do |t|
@@ -126,6 +127,21 @@ ActiveRecord::Schema.define(version: 20140201051921) do
     t.string   "z_address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "z_type"
+    t.string   "z_primary_city"
+    t.string   "z_acceptable"
+    t.string   "z_unacceptable_cities"
+    t.string   "z_state"
+    t.string   "z_county"
+    t.string   "z_timezone"
+    t.integer  "z_area_code"
+    t.float    "z_latitude"
+    t.float    "z_longitude"
+    t.string   "z_world_region"
+    t.string   "z_country"
+    t.integer  "z_decomissioned"
+    t.integer  "z_estimated_population"
+    t.string   "z_notes"
   end
 
 end

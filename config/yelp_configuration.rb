@@ -17,7 +17,7 @@ module YelpConfiguration
   API_VERSION          = :api_version
   SPECIFIC_LOCATION    = :specific_location
   LOCATION_UNAVAILABLE = :location_unavailable
-  CSV_PATH             = File.expand_path('../zip_codes.csv', __FILE__)
+  CSV_PATH             = File.expand_path('../zip_code_database.csv', __FILE__)
   
   class ConfigFile
     include Singleton
