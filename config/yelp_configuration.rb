@@ -17,6 +17,10 @@ module YelpConfiguration
   API_VERSION          = :api_version
   SPECIFIC_LOCATION    = :specific_location
   LOCATION_UNAVAILABLE = :location_unavailable
+  HASHED_PASSWORD      = :hashed_password
+  SALT                 = :salt
+  WAIT_TIMING          = :wait_timing
+  REPEAT_TIMING        = :repeat_timing
   CSV_PATH             = File.expand_path('../zip_code_database.csv', __FILE__)
   
   class ConfigFile
