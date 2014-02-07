@@ -21,6 +21,7 @@ gem 'nifty-generators'
 gem 'mocha'
 gem 'gmaps4rails' #Google Maps for Rails.
 gem "oauth", "~> 0.4.7"
+gem 'retryable'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
