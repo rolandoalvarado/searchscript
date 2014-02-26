@@ -42,7 +42,7 @@ if File.exists?(config_path)
       i_zip_code = zip_code[:z_zip_code].to_i
       puts "Search by #{search_term} in #{zip_code[:z_county]} with Zip Code : #{i_zip_code}"
       # No Search Limit
-      search_query    = "/#{api_version}/search?term=#{search_term}&location=#{i_zip_code}"
+      search_query    = "/#{api_version}/search?term=#{search_term}&location=#{i_zip_code}&offset=0"
          
       @config = {} unless @config
       consumer = OAuth::Consumer.new(consumer_key, consumer_secret, {:site => site_url })
@@ -67,9 +67,9 @@ if File.exists?(config_path)
                       :u_admin => 0, :u_status => 1  }
                   ]
                 
-                user_check = User.find_by u_firstname: business['id']
-                # Create User Records
-                user = User.create(user_records) if user_check.nil?
+                #user_check = User.find_by u_firstname: business['id']
+                # Create User Records 
+                user = User.create(user_records) #if user_check.nil?
                 
                 if user
                   categories = (business['categories'].to_s).gsub(/\[|\]/, '') if business['categories']
